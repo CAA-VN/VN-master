@@ -2,7 +2,7 @@
 
 # Continuous Integration
 
-Since the aim is to make this for-sale, the repo will not be public and will not be open source. This unfortunately limits the CI options available. As such, as of know I am planning on creating a simple CI for this project, which will include extra helpful features like a node graph for each pull.
+Since the aim is to make this for-sale, the repo will not be public and will not be open source. This unfortunately limits the CI options available. As such, as of now I am planning on creating a simple CI for this project, which will include extra helpful features like a node graph for each pull.
 
 # Tentative Style and Conventions Guide
 
@@ -11,7 +11,7 @@ In order to keep the code base from becoming spaghetti (very easy in renpy), ple
 *Note:* These are not final, if something doesn't really work out or could be better, just start a conversation on discord
 
 * Route names for programmming purposes will be the last name of the corresponding character
-* All .rpy files relating to a specific route *must* be under a subfolder
+* All .rpy files relating to a specific route *must* be under a subfolder under game
   
   * That subfolder should have the name of the route
   

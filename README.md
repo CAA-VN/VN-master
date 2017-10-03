@@ -34,4 +34,6 @@ In order to keep the code base from becoming spaghetti (very easy in renpy), ple
   
   you must rebind these in every single file.
   
-  
+* Python code is expected to follow [PEP8](https://www.python.org/dev/peps/pep-0008/), essentially follow the style part of [CS61a](https://cs61a.org/articles/composition.html)
+
+  * This is a looser rule, just skim through and try.

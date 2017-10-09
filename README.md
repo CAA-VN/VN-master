@@ -2,7 +2,7 @@
 
 # Continuous Integration
 
-Since the aim is to make this for-sale, the repo will not be public and will not be open source. This unfortunately limits the CI options available. As such, as of now I am planning on creating a simple CI for this project, which will include extra helpful features like a node graph for each pull.
+As such, as of now I am planning on creating a simple CI for this project, which will include extra helpful features like a node graph for each pull.
 
 # Tentative Style and Conventions Guide
 

@@ -3,33 +3,47 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
 
 
 # The game starts here.
+init python:
+    s = Shake((0, 0, 0, 0), 0.2, dist=15)
+
+image dwinelle = "images/dwinelle/default.png"
+image sather = im.Scale("images/scene/sather_gate.jpg", 1645, 720)
 
 label start:
+    jump dwinelle_demo
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+label dwinelle_demo:
+    
+    scene black
 
-    scene bg room
+    "Excuse me! Is this... GBO Group Six?" with s
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    show dwinelle
 
-    show eileen happy
+    "A tall woman with puffy blonde hair stops just short of where I\'m standing, catching her breath from under the large, green gate. As she catches her breath,"
 
-    # These display lines of dialogue.
+    "she\'s clutching a stack of wrinkled papers in one hand, while keeping herself steady by holding her knee with her other hand."
 
-    "Hello, world."
+    p "Are you the Group Six orientation leader?"
 
-    e "You've created a new Ren'Py game."
+    d "That would be me. My name's Rosa." with s
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    "Despite the shaky introduction, Rosa looks well-dressed and a lot older than the other students I've seen, even compared to the other orientation leaders. Is she... a graduate student?"
 
-    # This ends the game.
+    "Her face is well sculped and has lost the baby fat in her cheeks. And even at this distance, I can tell that she's wearing a strong perfume. Roses."
+
+    scene sather
+    show dwinelle
+
+    "She's finally standing up after having gulped some air. She straightens out her shirt and takes a moment to compose herself."
+
+    d "I'm pretty late, huh."
+
+    "She's double checking her papers as she smooths them out. I can tell they're freshly printed since none of the corners are warped."
 
     return
+    
+    

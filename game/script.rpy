@@ -8,19 +8,9 @@
 # The game starts here.
 init python:
     s = Shake((0, 0, 0, 0), 0.2, dist=15)
-    style.say_who_window.size = 200
-    style.namebox_label.size = 100
-
-style say_label:
-    color "#fff"
-    italic True
-    bold True
 
 image dwinelle = "images/dwinelle/default.png"
-image sather = im.Scale("images/dwinelle/sather_gate.jpg", 1645, 720)
-
-define d = Character("Rosa", what_prefix = '"', what_suffix = '"')
-define p = Character(None, what_prefix = '"', what_suffix = '"')
+image sather = im.Scale("images/scene/sather_gate.jpg", 1645, 720)
 
 label start:
     jump dwinelle_demo

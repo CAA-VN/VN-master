@@ -1,3 +1,7 @@
 *.swp
 *.swo
 *.rpyc
+log.txt
+errors.txt
+traceback.txt
+*.save

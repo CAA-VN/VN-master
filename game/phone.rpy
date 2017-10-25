@@ -14,9 +14,10 @@ init python:
 
     class Inbox(store.object):
 
-        def __init__(self):
+        def __init__(self, other = ""):
             self.inbox = []
             self.msg_queue = []
+            self.other = other
 
         def add_message(self, message, delay = 1.0):
             renpy.pause(delay)
@@ -37,8 +38,27 @@ init python:
             for mail in self.inbox:
                 yield mail
 
-    inbox = Inbox()
-    loading = LiveCrop((0, 0, 50, 7), "gui/phone_loading.png")
+    inbox = Inbox("Rosa")
+
+image phone_loading:
+    LiveCrop((0, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    LiveCrop((50, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    LiveCrop((100, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    LiveCrop((150, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    LiveCrop((200, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    LiveCrop((250, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    LiveCrop((300, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    LiveCrop((350, 0, 50, 7), "gui/phone_loading.png") 
+    0.1
+    repeat
+
 
 screen phone:
     modal False
@@ -51,7 +71,7 @@ screen phone:
             xalign 0.485
             yalign 0.4
             xfill False
-            label "Inbox"
+            text(inbox.other) xalign 0.5 color "#000"
             side "t r":
                 area (0, 0, 260, 400)
                 viewport id "message_list":
@@ -64,7 +84,7 @@ screen phone:
                                     xalign (message.align)
                                     background phone_frame
                                     text (message.message) color "#000" 
-            add loading
+            add "phone_loading"
             
 init -2 python:
 

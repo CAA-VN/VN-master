@@ -4,16 +4,26 @@ image top_text = ParameterizedText(window_bg = phone_frame, ypos=-0)
 init python:
     import renpy.store as store
 
-    class Text(store.object):
+    class TextMessage(store.object):
 
         def __init__(self, message, is_self = True):
             self.message = message
             self.is_self = is_self
-    
+            self.align = 1.0 if is_self else 0.0
+
     class Inbox(store.object):
         
         def __init__(self):
             self.mail = []
+            self.adding_message = False
+        
+        def add_message(self, message):
+            #pause then add the message
+            self.mail.append(message)
+
+    phone_inbox = Inbox() 
+    phone_inbox.add_message(TextMessage("Fuck me man, this sucks"))
+    phone_inbox.add_message(TextMessage("AAAAFKSDJ:FSDF"))
 
 screen phone:
     modal True
@@ -32,14 +42,14 @@ screen phone:
                 area (0, 0, 260, 400)
                 viewport id "message_list":
                     vbox:
-                        for i in range(5):
+                        for message in phone_inbox.mail:
                             frame: 
                                 background None
                                 xminimum 260
                                 frame at :
-                                    xalign 1.0
+                                    xalign (message.align)
                                     background phone_frame
-                                    text ("Is that true?") color "#000" 
+                                    text (message.message) color "#000" 
             
         hbox:
             null height 20

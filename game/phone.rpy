@@ -12,21 +12,22 @@ init python:
             self.align = 1.0 if is_self else 0.0
 
     class Inbox(store.object):
-        
-        def __init__(self):
-            self.mail = []
-            self.adding_message = False
-        
-        def add_message(self, message):
-            #pause then add the message
-            self.mail.append(message)
 
-    phone_inbox = Inbox() 
-    phone_inbox.add_message(TextMessage("Fuck me man, this sucks"))
-    phone_inbox.add_message(TextMessage("AAAAFKSDJ:FSDF"))
+        def __init__(self):
+            self.inbox = []
+
+        def add_message(self, message):
+            self.inbox.append(message)
+            renpy.restart_interaction()
+        
+        def __iter__(self):
+            for mail in self.inbox:
+                yield mail
+
+    inbox = Inbox()
 
 screen phone:
-    modal True
+    modal False
     frame:
         xalign 0.46 yalign 0.5
         add "gui/phone_overlay.png"
@@ -42,7 +43,7 @@ screen phone:
                 area (0, 0, 260, 400)
                 viewport id "message_list":
                     vbox:
-                        for message in phone_inbox.mail:
+                        for message in inbox:
                             frame: 
                                 background None
                                 xminimum 260

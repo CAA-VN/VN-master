@@ -9,15 +9,28 @@ init python:
         def __init__(self, message, is_self = True):
             self.message = message
             self.is_self = is_self
+            self.sending_message = False
             self.align = 1.0 if is_self else 0.0
 
     class Inbox(store.object):
 
         def __init__(self):
             self.inbox = []
+            self.msg_queue = []
 
-        def add_message(self, message):
+        def add_message(self, message, delay = 1.0):
+            renpy.pause(delay)
             self.inbox.append(message)
+            renpy.restart_interaction()
+
+        def show_animation(self):
+            self.sending_message = True
+            renpy.restart_interaction()
+
+        def process_message(self):
+            if self.msg_queue:
+                self.inbox.append(self.msg_queue.pop(0))
+            
             renpy.restart_interaction()
         
         def __iter__(self):
@@ -25,6 +38,7 @@ init python:
                 yield mail
 
     inbox = Inbox()
+    loading = LiveCrop((0, 0, 50, 7), "gui/phone_loading.png")
 
 screen phone:
     modal False
@@ -38,7 +52,6 @@ screen phone:
             yalign 0.4
             xfill False
             label "Inbox"
-            text ("Messages: 69")
             side "t r":
                 area (0, 0, 260, 400)
                 viewport id "message_list":
@@ -51,10 +64,8 @@ screen phone:
                                     xalign (message.align)
                                     background phone_frame
                                     text (message.message) color "#000" 
+            add loading
             
-        hbox:
-            null height 20
-
 init -2 python:
 
 

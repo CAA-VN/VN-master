@@ -13,12 +13,22 @@ image dwinelle = "images/dwinelle/default.png"
 image sather = im.Scale("images/scene/sather_gate.jpg", 1645, 720)
 
 label start:
+    $ inbox = Inbox("Rosa")
+    
     jump dwinelle_demo
 
 label dwinelle_demo:
-    
+
     scene black
 
+    show screen phone
+
+    $ inbox.add_message(TextMessage("SDFSDFSDFS"))
+    $ inbox.add_message(TextMessage("FUCk me man", False), 2.5)
+    $ inbox.add_message(TextMessage("adsfasdfsda asfsdfasdf me man"))
+
+    "" 
+    
     "Excuse me! Is this... GBO Group Six?" with s
 
     show dwinelle

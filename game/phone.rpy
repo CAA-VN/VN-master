@@ -1,6 +1,4 @@
 
-image top_text = ParameterizedText(window_bg = phone_frame, ypos=-0)
-
 init python:
     import renpy.store as store
 
@@ -11,6 +9,8 @@ init python:
             self.is_self = is_self
             self.sending_message = False
             self.align = 1.0 if is_self else 0.0
+            self.message_frame = user_frame if is_self else other_frame
+            self.color = "#fff" if is_self else "#000"
 
     class Inbox(store.object):
 
@@ -19,6 +19,9 @@ init python:
             self.msg_queue = []
             self.other = other
             self.loading_image = None
+
+        def change_recipient(self, name):
+            self.other = name
 
         def add_message(self, message, delay = 1.0):
             if message.is_self:
@@ -78,12 +81,12 @@ screen phone:
         background None
         style_group "phone"
         vbox:
-            xalign 0.485
+            xalign 0.49
             yalign 0.4
             xfill False
             text(inbox.other) xalign 0.5 color "#000"
             side "t r":
-                area (0, 0, 260, 400)
+                area (0, 20, 265, 400)
                 viewport id "message_list":
                     vbox:
                         for message in inbox:
@@ -91,18 +94,19 @@ screen phone:
                                 background None
                                 xminimum 260
                                 frame at :
+                                    ypadding 8
+                                    xpadding 8
                                     xalign (message.align)
-                                    background phone_frame
-                                    text (message.message) color "#000" 
-            add inbox.loading_image
+                                    background message.message_frame
+                                    text (message.message) color message.color size 14
+                vbar value YScrollValue("message_list")
+            add inbox.loading_image yalign 1.0
             
 init -2 python:
-
-
-    phone_frame = Frame("gui/frame.png", 15, 15)
+    user_frame = Frame("gui/user_text.png", 6, 6)
+    other_frame = Frame("gui/other_text.png", 6, 6)
     style.phone = Style(style.default)
     #style.phone_frame.background = None
     #style.phone_frame.xalign = 0.46
     #style.phone_frame.yalign = 0.5    
-    style.phone_window.background = phone_frame
     

@@ -18,16 +18,26 @@ init python:
             self.inbox = []
             self.msg_queue = []
             self.other = other
+            self.loading_image = None
 
         def add_message(self, message, delay = 1.0):
+            if message.is_self:
+                self.stop_animation()
+            else:
+                self.start_animation()
             renpy.pause(delay)
             self.inbox.append(message)
+            self.stop_animation()
             renpy.restart_interaction()
 
-        def show_animation(self):
-            self.sending_message = True
+        def start_animation(self):
+            self.loading_image = "phone_loading"
             renpy.restart_interaction()
 
+        def stop_animation(self):
+            self.loading_image = None
+            renpy.restart_interaction()
+       
         def process_message(self):
             if self.msg_queue:
                 self.inbox.append(self.msg_queue.pop(0))
@@ -38,7 +48,7 @@ init python:
             for mail in self.inbox:
                 yield mail
 
-    inbox = Inbox("Rosa")
+    inbox = Inbox("")
 
 image phone_loading:
     LiveCrop((0, 0, 50, 7), "gui/phone_loading.png") 
@@ -84,7 +94,7 @@ screen phone:
                                     xalign (message.align)
                                     background phone_frame
                                     text (message.message) color "#000" 
-            add "phone_loading"
+            add inbox.loading_image
             
 init -2 python:
 

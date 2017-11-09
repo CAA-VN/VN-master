@@ -63,7 +63,7 @@ init python:
             pass
 
         def receive_message(self, message):
-            self.incoming_message = message
+            self.message = message
             renpy.restart_interaction()
             renpy.pause()
         
@@ -134,10 +134,8 @@ screen phone_calling:
             xfill False
             add "gui/rosa_head.png" xalign 0.5 ypos -90
             text ("Rosa") xalign 0.5 ypos -80
-
-            side "b r":
-                area(0, 20, 265, 70)
-                text ('"You still there?"') size 14 xalign 0.5 ypos 80
+            
+            text (phone.message) size 14 xalign 0.5 ypos 80 xmaximum 200
             
             
 init -2 python:

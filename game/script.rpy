@@ -14,6 +14,8 @@ image sather = im.Scale("images/scene/sather_gate.jpg", 1645, 720)
 
 label start:
     $ inbox = Inbox("Rosa")
+
+    $ phone = Phone()
     
     jump dwinelle_demo
 
@@ -21,11 +23,9 @@ label dwinelle_demo:
 
     scene black
 
-    show screen phone
+    show screen phone_calling
 
-    $ inbox.add_message(TextMessage("SDFSDFSDFS"))
-    $ inbox.add_message(TextMessage("FUCk me man", False), 2.5)
-    $ inbox.add_message(TextMessage("adsfasdfsda asfsdfasdf me man"))
+    $ phone.receive_message("Hey, are you there?")
 
     "" 
     

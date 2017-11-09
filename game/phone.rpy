@@ -50,8 +50,27 @@ init python:
         def __iter__(self):
             for mail in self.inbox:
                 yield mail
+    
+    class Phone(store.object):
+
+        def __init__(self):
+            self.message = ""
+
+        def call(self, caller):
+            pass
+
+        def hangup(self):
+            pass
+
+        def receive_message(self, message):
+            self.incoming_message = message
+            renpy.restart_interaction()
+            renpy.pause()
+        
+
 
     inbox = Inbox("")
+    phone = Phone()
 
 image phone_loading:
     LiveCrop((0, 0, 50, 7), "gui/phone_loading.png") 
@@ -73,13 +92,13 @@ image phone_loading:
     repeat
 
 
-screen phone:
+screen phone_text:
     modal False
     frame:
         xalign 0.46 yalign 0.5
         add "gui/phone_overlay.png"
         background None
-        style_group "phone"
+        style_group "phone_text"
         vbox:
             xalign 0.49
             yalign 0.4
@@ -100,7 +119,26 @@ screen phone:
                                     background message.message_frame
                                     text (message.message) color message.color size 14
                 vbar value YScrollValue("message_list")
-            add inbox.loading_image yalign 1.0
+            #add inbox.loading_image yalign 1.0
+
+screen phone_calling:
+    modal False
+    frame:
+        xalign 0.46 yalign 0.5
+        add "gui/phone_call_base.png"
+        background None
+        style_group "phone_call"
+        vbox:
+            xalign 0.49
+            yalign 0.4
+            xfill False
+            add "gui/rosa_head.png" xalign 0.5 ypos -90
+            text ("Rosa") xalign 0.5 ypos -80
+
+            side "b r":
+                area(0, 20, 265, 70)
+                text ('"You still there?"') size 14 xalign 0.5 ypos 80
+            
             
 init -2 python:
     user_frame = Frame("gui/user_text.png", 6, 6)

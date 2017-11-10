@@ -64,10 +64,10 @@ init python:
             renpy.hide_screen("phone_calling")
 
 
-        def receive_message(self, message, delay=-1.0):
+        def receive_message(self, message, continuous = False, delay=-1.0):
             self.message = message
             self.audio_image = "audio_wave"
-            
+
             if delay < 0:
                 avg_sec_per_letter = 0.085
                 delay = len(message.replace(" ", "")) * avg_sec_per_letter
@@ -76,30 +76,15 @@ init python:
             renpy.pause(delay)
             self.audio_image = "audio_wave_quiet"
             renpy.restart_interaction()
+
+            if not continuous:
+                renpy.pause()
+
         
 
 
     inbox = Inbox("")
     phone = Phone()
-
-image phone_loading:
-    LiveCrop((0, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    LiveCrop((50, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    LiveCrop((100, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    LiveCrop((150, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    LiveCrop((200, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    LiveCrop((250, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    LiveCrop((300, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    LiveCrop((350, 0, 50, 7), "gui/phone_loading.png") 
-    0.1
-    repeat
 
 image audio_wave:
     "gui/audio_wave/1.png" #the image is 110x32

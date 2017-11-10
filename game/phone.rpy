@@ -55,17 +55,27 @@ init python:
 
         def __init__(self):
             self.message = ""
+            self.audio_image = "audio_wave_quiet"
 
         def call(self, caller):
-            pass
+            renpy.show_screen("phone_calling")
 
         def hangup(self):
-            pass
+            renpy.hide_screen("phone_calling")
 
-        def receive_message(self, message):
+
+        def receive_message(self, message, delay=-1.0):
             self.message = message
+            self.audio_image = "audio_wave"
+            
+            if delay < 0:
+                avg_sec_per_letter = 0.085
+                delay = len(message.replace(" ", "")) * avg_sec_per_letter
+
             renpy.restart_interaction()
-            renpy.pause()
+            renpy.pause(delay)
+            self.audio_image = "audio_wave_quiet"
+            renpy.restart_interaction()
         
 
 
@@ -91,6 +101,94 @@ image phone_loading:
     0.1
     repeat
 
+image audio_wave:
+    "gui/audio_wave/1.png" #the image is 110x32
+    0.06
+    "gui/audio_wave/2.png"
+    0.06
+    "gui/audio_wave/3.png"
+    0.06
+    "gui/audio_wave/4.png"
+    0.06
+    "gui/audio_wave/5.png"
+    0.06
+    "gui/audio_wave/6.png"
+    0.06
+    "gui/audio_wave/7.png"
+    0.06
+    "gui/audio_wave/8.png"
+    0.06
+    "gui/audio_wave/9.png"
+    0.06
+    "gui/audio_wave/10.png"
+    0.06
+    "gui/audio_wave/11.png"
+    0.06
+    "gui/audio_wave/12.png"
+    0.06
+    "gui/audio_wave/13.png"
+    0.06
+    "gui/audio_wave/14.png"
+    0.06
+    "gui/audio_wave/15.png"
+    0.06
+    "gui/audio_wave/16.png"
+    0.06
+    "gui/audio_wave/17.png"
+    0.06
+    "gui/audio_wave/18.png"
+    0.06
+    "gui/audio_wave/19.png"
+    0.06
+    "gui/audio_wave/20.png"
+    0.06
+    "gui/audio_wave/21.png"
+    0.06
+    "gui/audio_wave/22.png"
+    0.06
+    "gui/audio_wave/23.png"
+    0.06
+    "gui/audio_wave/24.png"
+    0.06
+    "gui/audio_wave/25.png"
+    0.06
+    "gui/audio_wave/26.png"
+    0.06
+    "gui/audio_wave/27.png"
+    0.06
+    "gui/audio_wave/28.png"
+    repeat
+
+image audio_wave_quiet:
+    "gui/audio_wave/quiet_1.png"
+    0.06
+    "gui/audio_wave/quiet_2.png"
+    0.06
+    "gui/audio_wave/quiet_3.png"
+    0.06
+    "gui/audio_wave/quiet_4.png"
+    0.06
+    "gui/audio_wave/quiet_5.png"
+    0.06
+    "gui/audio_wave/quiet_6.png"
+    0.06
+    "gui/audio_wave/quiet_7.png"
+    0.06
+    "gui/audio_wave/quiet_8.png"
+    0.06
+    "gui/audio_wave/quiet_9.png"
+    0.06
+    "gui/audio_wave/quiet_10.png"
+    0.06
+    "gui/audio_wave/quiet_11.png"
+    0.06
+    "gui/audio_wave/quiet_12.png"
+    0.06
+    "gui/audio_wave/quiet_13.png"
+    0.06
+    "gui/audio_wave/quiet_14.png"
+    0.06
+    repeat
 
 screen phone_text:
     modal False
@@ -119,7 +217,6 @@ screen phone_text:
                                     background message.message_frame
                                     text (message.message) color message.color size 14
                 vbar value YScrollValue("message_list")
-            #add inbox.loading_image yalign 1.0
 
 screen phone_calling:
     modal False
@@ -134,8 +231,9 @@ screen phone_calling:
             xfill False
             add "gui/rosa_head.png" xalign 0.5 ypos -90
             text ("Rosa") xalign 0.5 ypos -80
-            
-            text (phone.message) size 14 xalign 0.5 ypos 80 xmaximum 200
+
+            add (phone.audio_image) xalign 0.5 ypos 60
+            text (phone.message) size 14 xalign 0.5 ypos 80 xmaximum 240
             
             
 init -2 python:

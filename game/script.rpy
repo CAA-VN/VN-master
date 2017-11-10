@@ -23,11 +23,24 @@ label dwinelle_demo:
 
     scene black
 
-    show screen phone_calling
+    $ phone.call(None)
 
-    $ phone.receive_message("Hey, are you there?")
+    $ phone.receive_message("Snake, did you find food?")
 
-    "" 
+    p "Yeah."
+
+    $ phone.receive_message("You sound happy.")
+
+    p "I am!"
+
+    $ phone.receive_message("Do you know how to eat it?")
+
+    p "..."
+
+    $ phone.receive_message("Then let me explain. To eat food, press the START button to enter the Survival Viewer then select FOOD.")
+    
+    $ phone.hangup()
+
     
     "Excuse me! Is this... GBO Group Six?" with s
 

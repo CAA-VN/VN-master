@@ -22,6 +22,12 @@ In order to keep the code base from becoming spaghetti (very easy in renpy), ple
   * This is to prevent label collision. Unfortunately, having all labels inside a specific route be sublabels is not terribly feasible, so this pseudo namespace is the compromise
   
 * Avoid if at all possible *define* statements inside files inside your route folder; keep them in the global .rpy files in root
+
+* Keep all character definitions in character.rpy; create the character definition with the full name, then create a shorter one below
+
+* Do modify gui.rpy
+
+* Try to override styles in override_styles.rpy instead of modifying screens.rpy (it's just easier to see changes)
   
 * Python code is expected to follow [PEP8](https://www.python.org/dev/peps/pep-0008/), essentially follow the style part of [CS61a](https://cs61a.org/articles/composition.html)
 

@@ -1,7 +1,7 @@
 
 label common_scene1:
 
-    scene black
+    scene bg unit_courtyard
 
     "It’s early in the morning, a bit colder than I’m used to back home. Just by standing in this room, I can feel the shivers crawling up my skin."
 

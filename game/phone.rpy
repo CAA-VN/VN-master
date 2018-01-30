@@ -53,15 +53,26 @@ init python:
     
     class Phone(store.object):
 
+        caller_dictionary = {
+            'Rosa': 'gui/rosa_head.png',
+            'Mom': 'gui/unknown-female.png'
+        }
+
         def __init__(self):
             self.message = ""
             self.audio_image = "audio_wave_quiet"
+            self.caller_image = "gui/unknown-female.png"
+            self.caller = ""
 
         def call(self, caller):
             renpy.show_screen("phone_calling")
+            self.caller_image = self.caller_dictionary.get(caller, "gui/unknown-female.png")
+            self.caller = caller
 
         def hangup(self):
             renpy.hide_screen("phone_calling")
+            self.caller_image = "gui/unknown-female.png"
+            self.caller = ""
 
 
         def receive_message(self, message, continuous = False, delay=-1.0):
@@ -210,15 +221,15 @@ screen phone_calling:
         add "gui/phone_call_base.png"
         background None
         style_group "phone_call"
-        vbox:
-            xalign 0.49
-            yalign 0.4
+        frame:
+            background None
+            yalign -1
             xfill False
-            add "gui/rosa_head.png" xalign 0.5 ypos -90
-            text ("Rosa") xalign 0.5 ypos -80
+            add (phone.caller_image) xalign 0.49 ypos 100
+            text (phone.caller) xalign 0.49 ypos 220
 
-            add (phone.audio_image) xalign 0.5 ypos 60
-            text (phone.message) size 14 xalign 0.5 ypos 80 xmaximum 240
+            add (phone.audio_image) xalign 0.49 ypos 400
+            text (phone.message) size 14 xalign 0.49 ypos 430 xmaximum 240
             
             
 init -2 python:

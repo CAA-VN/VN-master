@@ -5,3 +5,4 @@ log.txt
 errors.txt
 traceback.txt
 *.save
+*.DS_Store

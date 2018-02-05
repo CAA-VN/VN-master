@@ -1,0 +1,1 @@
+image bg unit_courtyard = "scene/unit_courtyard.jpg"

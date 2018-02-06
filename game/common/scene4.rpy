@@ -172,12 +172,12 @@ label common_scene4:
 
     menu:
         "It made me feel comfortable.":
-            jump scene4_cont
+            jump common_scene4_cont
 
         "It was a bit unnerving.":
-            jump scene4_cont
+            jump common_scene4_cont
 
-    label scene4_cont:
+    label common_scene4_cont:
 
         d "I see. Well, that’s all up to you for now. I’m just wondering what a freshman might see the first time."
 

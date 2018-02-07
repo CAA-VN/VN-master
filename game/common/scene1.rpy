@@ -64,11 +64,11 @@ label common_scene1:
     $ phone.receive_message("I’m sure it’ll be all the same for you.")
 
     $ phone.receive_message("Whatever your heart desires, kiddo.")
-    
+
     $ phone.receive_message("It’s there on campus. I promise.")
-    
+
     $ phone.receive_message("You just need the tenacity to chase after it.")
-    
+
     $ phone.receive_message("Reach for it. You’re my child, after all.")
 
     $ phone.receive_message("That’s how I know you can do this and that you won’t fail.")
@@ -151,11 +151,5 @@ label common_scene1:
 
     "I hustle through the final steps and into the building’s main lobby. I walk out of the large double doors and I make it to the courtyard of the dormitory unit."
 
-    jump common_scene2
-
-
-
-
-
-
-    
+    #jump common_scene2
+    jump common_scene4

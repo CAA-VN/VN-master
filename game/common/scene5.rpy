@@ -216,20 +216,20 @@ label common_scene5:
 
     menu:
         "It’s a bit too wild for me.":
-            jump tame
+            jump common_scene5tame
         "There’s more to this place than I expected.":
-            jump wild
+            jump common_scene5wild
 
 
-    label tame:
+    label common_scene5tame:
 
         "Rosa taps her finger on her other arm, still limp and with cigarette in hand. She looks unimpressed, but continues on."
 
         d "Wild. Okay."
 
-        jump cont
+        jump common_scene5cont
 
-    label wild:
+    label common_scene5wild:
 
         d "Maybe I’ll be finding you here, lighting one up, pretty soon."
 
@@ -237,9 +237,9 @@ label common_scene5:
 
         "Once again, Rosa waves away my sentence with her hand, as if she expected this exact response."
 
-        jump cont
+        jump common_scene5cont
 
-    label cont:
+    label common_scene5cont:
 
         "She points at the moldy bricks above us."
 

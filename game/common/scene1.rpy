@@ -151,5 +151,4 @@ label common_scene1:
 
     "I hustle through the final steps and into the building’s main lobby. I walk out of the large double doors and I make it to the courtyard of the dormitory unit."
 
-    #jump common_scene2
-    jump common_scene4
+    jump common_scene2

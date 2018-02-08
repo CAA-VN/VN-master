@@ -1,12 +1,12 @@
 label common_scene4:
 
-    #scene bg memorial_glade
+    scene bg glade
 
     "We walk for a few more minutes before reaching a flat grass clearing surrounded by grand buildings."
 
     "On one side of the grass is a massive building with classical pillars and windows about three stories tall."
 
-    "On the top reads “The Bell Library.”"
+    "On the top reads \"The Bell Library.\""
 
     "There are a few people lounging on the grass and a frisbee flying through the air between two people."
 
@@ -28,7 +28,7 @@ label common_scene4:
 
     d "That’s a seal. They’re everywhere on campus if you look at the floors."
 
-    p "Why’d you tell me to “watch out” for it, though?"
+    p "Why’d you tell me to \"watch out\" for it, though?"
 
     "Rosa opens her mouth to speak but notices a group of about ten students walking in our direction."
 
@@ -40,11 +40,11 @@ label common_scene4:
 
     "We can hear some of their conversation."
 
-    "“Yeah, our dance club is being really tough with their practice times... have you all sold your tickets to the show yet?”"
+    "\"Yeah, our dance club is being really tough with their practice times... have you all sold your tickets to the show yet?\""
 
     "..."
 
-    "“0% sugar in boba with pudding for life. Spare Tea is godlike—”"
+    "\"Zero percent sugar in boba with pudding for life. Spare Tea is godlike—\""
 
     "The students are walking normally but suddenly split into two groups."
 
@@ -74,11 +74,11 @@ label common_scene4:
 
      d "Not that I haven’t stepped on a seal or two."
 
-     "Rosa laughs."
+    "Rosa laughs."
 
     d "Based on my own experience... I wouldn’t take the chance. If you catch my drift."
 
-     "I never would have expected such an old curse to be marked right onto the surface of the school. What’s going on here?"
+    "I never would have expected such an old curse to be marked right onto the surface of the school. What’s going on here?"
 
     "My parents never told me about this part of the school— did they ever step on a seal?"
 
@@ -87,7 +87,7 @@ label common_scene4:
     "Rosa laughs and puts her hands on her hips."
 
     d "Maybe it just rubs off on them from orientation."
-    
+
     d "There’s also this grassy hill on the other side of campus where students roll themselves down at full speed..."
 
     d "...It’s supposed to be a charm to keep your GPA high."
@@ -115,10 +115,10 @@ label common_scene4:
     "It’s as if this is the only place to see the sky on campus: no trees, no buildings, for just a short stretch of land."
 
     d "Welcome to Memory Glade. It’s really just a big lawn, but this is one of the most important places on campus."
-     
+
     d "Our Chancellor pays the big bucks to keep this place clean. Except for a certain day of the year..."
 
-    "One of the buildings reads “Bell Library” in large letters etched onto the stone, decorated with accompanying pillars."
+    "One of the buildings reads \"Bell Library\" in large letters etched onto the stone, decorated with accompanying pillars."
 
     "My eyes light up."
 
@@ -208,7 +208,7 @@ label common_scene4:
         "She’s completely right, but I don’t want her to beat herself up about it."
 
         "I’m just a freshman, maybe I don’t know what it means to be a busy student yet."
-         
+
         p "You probably have a ton of things to do. It’s your last year here, after all."
 
         "Rosa grins as she folds the stack of papers she’s been holding."

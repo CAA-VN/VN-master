@@ -15,6 +15,8 @@ init python:
 
 #Full character definitions
 
+image ch dwinelle = "dwinelle/default.png"
+
 define narrator = character_factory(None, True)
 define nvl_narrator = Character(None, kind=nvl)
 

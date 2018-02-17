@@ -2,7 +2,7 @@
 init python:
     
     def character_factory(name, narrator = False):
-        prefix, suffix = '"', '"'
+        prefix, suffix = '“', '”'
 
         if narrator:
             prefix, suffix = "", ""

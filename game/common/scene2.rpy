@@ -1,5 +1,5 @@
 
-label common_scene5:    
+label common_scene2:    
     
     scene bg unit_courtyard
     
@@ -53,13 +53,13 @@ label common_scene5:
     
     v "“Hey, are you heading to orientation too?”"
 
-    mc "“...Oh, yeah! Do you know where we’re supposed to meet?”"
+    p "“...Oh, yeah! Do you know where we’re supposed to meet?”"
     
     v "“Should be The Gate, right? We can walk there with you, since our orientation group is meeting there too.”"
     
     "The two look friendly enough. I immediately accept the offer, knowing I wouldn’t able to get to the orientation area alone."
     
-    mc "“Sure!”"
+    p "“Sure!”"
     
     scene bg street
     
@@ -67,27 +67,27 @@ label common_scene5:
 
     "Why aren’t they going faster if they know we’re late? I had to say something."
     
-    mc "“Hey, you know we’re gonna be late if we don’t hurry, right?”"
+    p "“Hey, you know we’re gonna be late if we don’t hurry, right?”"
     
     v "“Huh? We should still be fine.”"
     
     "She stares at me with a confused look on her face and her head tilted."
     
-    mc "“But the bell tower already chimed 9 o’clock, so aren’t we late?”"
+    p "“But the bell tower already chimed 9 o’clock, so aren’t we late?”"
     
     v "“Wait, you don’t know?”"
     
-    mc "“Know what?”"
+    p "“Know what?”"
     
     v "“Hmm, I thought everybody knew about Bell Time.”"
     
-    mc "“What time?”"
+    p "“What time?”"
     
     v "“Bell Time. You can basically show up ten minutes late to anything here, and you’d still be on time.”"
     
     "Ten minutes, huh. That would have been nice during high school, when I had to rush from class to class. I hope I don’t abuse the privilege."
     
-    mc "“Wow, I didn’t know about that. That sounds really convenient!”"
+    p "“Wow, I didn’t know about that. That sounds really convenient!”"
     
     v "“Yeah. The school uses it because classes start and end on the hour. People with back-to-back classes need time to get to their classrooms, so every class starts ten minutes after.” "
     
@@ -111,7 +111,7 @@ label common_scene5:
     
     "I stare at her for a few seconds after hearing the sudden question. Regaining my composure, I answer back."
 
-    mc "“Is it that obvious?”"
+    p "“Is it that obvious?”"
     
     "She smiles at the affirmation, continuing her leisurely pace down the busy street."
     
@@ -123,7 +123,7 @@ label common_scene5:
     
     "Do I look lost? It’s true that I was looking at all of the signs on the street, but I did my best to stare straight ahead and not look like a new freshman."
 
-    mc "“So does that mean you have been here before? Since you seem to know where you’re going.”"
+    p "“So does that mean you have been here before? Since you seem to know where you’re going.”"
     
     v "“Just once. I came here on Bell Day.”"
     
@@ -147,7 +147,7 @@ label common_scene5:
     
     "Violet, huh? That’s a unique name. Though I’ve never heard of “Vi” being used as a nickname for Violet, I’ll just go with it since she seems casual about it."
     
-    mc "“Nice to meet you.”"
+    p "“Nice to meet you.”"
     
     "I shake her outstretched hand. Vi motions to the taller girl, who was lurking behind us the entire time."
     
@@ -155,7 +155,7 @@ label common_scene5:
     
     c "“...Hey.”"
     
-    mc "“Yo.”"
+    p "“Yo.”"
     
     "An awkward pause starts as Cora retreats back to her spot behind us. Vi frowns slightly for the first time since I met her, but reverts back quickly to her usual smile and turns back to me."
     
@@ -163,13 +163,13 @@ label common_scene5:
     
     "I can see that. Cora’s face is glued to her phone screen, though she does occasionally raise her head and look in the direction of our conversation."
     
-    mc "“So, how do you two know each other?“"
+    p "“So, how do you two know each other?“"
     
     v "“Well, we’re roommates.”"
     
     "She beams at Cora before turning back to watch the crosswalk light."
     
-    mc "“I see.”"
+    p "“I see.”"
     
     "Quite an interesting pair to be roommates. But you know what they say, opposites attract."
     
@@ -193,7 +193,7 @@ label common_scene5:
     
     "In the center are rows of tables and benches where people are eating their food. The whole area is packed with people waiting in line or walking around, deciding where to eat."
     
-    mc "“Wow, there’s a lot of people here.”"
+    p "“Wow, there’s a lot of people here.”"
     
     v "“Oh, yeah, that’s Italian Ghetto. I heard there are a bunch of good places to eat here. Have you been here yet, Cora?”"
     
@@ -211,19 +211,21 @@ label common_scene5:
     
     "We continue at our pace when we suddenly heard a loud “Heck yeah!”"
     
-    mc v "“Whoa!”"
+    p "“Whoa!”"
+
+    v "“Whoa!”"
     
-    mc "“Where did that come from?”"
+    p "“Where did that come from?”"
     
     v "“I think it came from over there.”"
     
     "She points in the direction of the street corner, where a disheveled man sits in front of a Malblue’s"
     
-    mc "“It was probably him, then. Looks like he’s homeless.”"
+    p "“It was probably him, then. Looks like he’s homeless.”"
     
     v "“Oh, I’ve heard about the homeless population here. Most of them are harmless as long as you keep to yourself.“"
     
-    mc "“Wow, you’re pretty knowledgeable about the area.”"
+    p "“Wow, you’re pretty knowledgeable about the area.”"
     
     "Vi shrugs and falls silent for a moment. She glances down at her feet instead of keeping her gaze focused forward. There’s definitely a moment of hesitation before she responds."
     
@@ -261,7 +263,7 @@ label common_scene5:
     
     v "“What’s your major?”"
     
-    mc "“Actually... I still haven’t decided yet.”"
+    p "“Actually... I still haven’t decided yet.”"
     
     "Vi was silent for a few seconds. Her usual smile falters slightly, and she looks at me with serious eyes, analyzing me and thinking about what to say next."
     
@@ -273,13 +275,13 @@ label common_scene5:
     
     "I should probably ask what her major is. Might as well get used to asking, since I’m gonna do it a lot in the next few years."
     
-    mc "“And what about you?”"
+    p "“And what about you?”"
     
     v "“Molecular and Cellular Biology. I’m pre-med.”"
     
     "Pre-med, huh? Only one thing that really leads to…"
     
-    mc "“...So you want to be a doctor, then?”"
+    p "“...So you want to be a doctor, then?”"
     
     v "“Something like that.”"
     
@@ -291,7 +293,7 @@ label common_scene5:
     
     "I bite another bullet and look over my shoulder to Cora, still tapping away at her phone."
     
-    mc "“What’s your major, Cora?”"
+    p "“What’s your major, Cora?”"
     
     "Cora replies while looking at her phone."
     
@@ -303,19 +305,19 @@ label common_scene5:
     
     v "“Cora is hella smart, if you end up taking CS 61A, you should definitely study with her.”"
     
-    mc "“Oh, is that an introductory computer science class?”"
+    p "“Oh, is that an introductory computer science class?”"
     
     "Cora looks up from her phone the moment I said the words “computer science.”"
     
     v "“I heard a lot of people take the class.”"
     
-    mc "“Oh yeah. I’ve overheard conversations from other freshmen that the class size was over 2000 people.”"
+    p "“Oh yeah. I’ve overheard conversations from other freshmen that the class size was over 2000 people.”"
     
     c "“...It is.”"
     
     "Cora suddenly jumps into the conversation, without Vi as a buffer."
     
-    mc "“I wonder why they don’t just offer two iterations of the class.”"
+    p "“I wonder why they don’t just offer two iterations of the class.”"
     
     c "“...Budget limits.”"
     
@@ -325,7 +327,7 @@ label common_scene5:
     
     "All I did was relax after graduation until I got here."
     
-    mc "“You know a lot about the EECS department already.”"
+    p "“You know a lot about the EECS department already.”"
     
     c "“I’ve been doing a lot of research on EECS. I wanted to know more about the program.”"
     
@@ -339,13 +341,13 @@ label common_scene5:
     
     "Speaking of classes..."
     
-    mc "“What classes are you taking, Vi?”"
+    p "“What classes are you taking, Vi?”"
     
     v "“Oh, mostly technicals for my major. Stuff like Biology 1B."
     
-    mc "“Hmm, interesting.”"
+    p "“Hmm, interesting.”"
     
-    mc "“Why is it 1B, is there a 1A or something?”"
+    p "“Why is it 1B, is there a 1A or something?”"
     
     v "“Oh, so Biology 1B is more ecology, plant biology and evolution, whereas 1A is human physiology and systems. 1B is supposed to be easier, and it doesn’t have any prerequisites.”"
     
@@ -358,96 +360,95 @@ label common_scene5:
     "Not only am I undeclared, I’m also just bouncing around basic graduation requirement classes until I take something more solidified..."
 
     # y/n choice code goes here cant be bothered to do it while copying text
-	menu:
-		"Yes.":
-			jump common_scene1_yes
-		"No.":
-			jump common_scene1_no
-    
+    menu:
+      "Yes.":
+        jump common_scene1_yes
+      "No.":
+        jump common_scene1_no
+
     # yes
     label common_scene1_yes:
-	
-		mc "“Well, to tell you the truth, I still haven’t decided on any classes yet..”"
-		
-		v "“Wow, really? But we’re enrolling in them pretty soon…”"
-    
-		mc "“Yeah, I know. I still have a little time though.”"
-    
-		v "“...That’s true.”"
-    
-		v "“Actually, if you haven’t decided yet, why not take Bio 1B? And maybe CS 61A?”"
-    
-		v "“Cora and I could always use another study partner.”"
-		
-		jump common_scene1_cabbage_power
-    
-    # no
-    label common_scene1_no
-	
-		"Time to use my fibbing powers."
-    
-		mc "“I was thinking about CS 61A and Bio 1B. I just want to see what interests me.”"
-    
-		v "“Oh, nice!”"
-		
-		jump common_scene1_cabbage_power
-        
-    # merge choices
-	
-	label common_scene1_cabbage_power"
-    
-		v "“Then you can study with the both of us!”"
-		
-		mc "“True…”"
-		
-		"Though I’ve always worked best by myself, I think I’ll be fine."
-		
-		"The street we’re walking on finally ends, and beyond the next crosswalk is a huge crowd of people. We’re probably near our destination."
-		
-		v "“Oh, that’s Sprout Plaza over there! And further down is Sather Gate, where we need to be.”"
-		
-		"The plaza is lined with two rows of small trees. Sure enough, looking further there is a tall gate-like structure where the majority of the crowd was gathered. I presume that’s Sather Gate."
-		
-		"Though it’s hard to see with the number of people around the area. To the left of the plaza is a tall building with a sign stating “STUDENT UNION”."
-		
-		"I look at Vi and Cora. Both of them were in awe at the number of people gathered around Sather Gate. They’re not alone."
-		
-		"Even knowing this is one of the biggest universities in the country in terms of student population, it’s still just a number until you see the sheer amount of people in campus."
-		
-		v "“Looks like there’s still a lot of people around there for orientation, so we’re not too late!”"
-		
-		v "“By the way, I forgot to ask, but which orientation group are you in?”"
-		
-		"The paper from this morning said I was in Group 6. I wonder if Vi and Cora are in the same group."
-		
-		mc "“I’m in Group 6. What about you two?”"
-		
-		v "“We’re in Group 17. We’ll have to split off there then.”"
-		
-		mc "“Yeah.”"
-		
-		"I know they live in the same dorm as me, but I wonder which building…"
-		
-		mc "“Which building do you guys live in?”"
-		
-		v "“Building? We live in Slothman.”"
-		
-		"At her response, I suddenly recall Vi running out of the same building I lived in when I first saw her this morning."
-		
-		mc "“Oh wow, same here.”"
-		
-		v "“Oh, really? Maybe we might see each other around the building!”"
-		
-		mc "“For sure.”"
-		
-		v "“Totally! Us freshmen have to stick together, since this place is so big.”"
-		
-		"That’s true. Looking at the size of this crowd makes me realize that."
-		
-		v "“Well, we should get going.”"
-		
-		"They’re so confident. I envy that."
-		
-		# obligatory comment about walruses.
 
-		jump common_scene2
+      p "“Well, to tell you the truth, I still haven’t decided on any classes yet..”"
+
+      v "“Wow, really? But we’re enrolling in them pretty soon…”"
+
+      p "“Yeah, I know. I still have a little time though.”"
+
+      v "“...That’s true.”"
+
+      v "“Actually, if you haven’t decided yet, why not take Bio 1B? And maybe CS 61A?”"
+
+      v "“Cora and I could always use another study partner.”"
+
+      jump common_scene1_cabbage_power
+
+    # no
+    label common_scene1_no:
+    
+      "Time to use my fibbing powers."
+      
+      p "“I was thinking about CS 61A and Bio 1B. I just want to see what interests me.”"
+      
+      v "“Oh, nice!”"
+      
+      jump common_scene1_cabbage_power
+          
+    # merge choices
+label common_scene1_cabbage_power:
+
+  v "“Then you can study with the both of us!”"
+
+  p "“True…”"
+
+  "Though I’ve always worked best by myself, I think I’ll be fine."
+
+  "The street we’re walking on finally ends, and beyond the next crosswalk is a huge crowd of people. We’re probably near our destination."
+
+  v "“Oh, that’s Sprout Plaza over there! And further down is Sather Gate, where we need to be.”"
+
+  "The plaza is lined with two rows of small trees. Sure enough, looking further there is a tall gate-like structure where the majority of the crowd was gathered. I presume that’s Sather Gate."
+
+  "Though it’s hard to see with the number of people around the area. To the left of the plaza is a tall building with a sign stating “STUDENT UNION”."
+
+  "I look at Vi and Cora. Both of them were in awe at the number of people gathered around Sather Gate. They’re not alone."
+
+  "Even knowing this is one of the biggest universities in the country in terms of student population, it’s still just a number until you see the sheer amount of people in campus."
+
+  v "“Looks like there’s still a lot of people around there for orientation, so we’re not too late!”"
+
+  v "“By the way, I forgot to ask, but which orientation group are you in?”"
+
+  "The paper from this morning said I was in Group 6. I wonder if Vi and Cora are in the same group."
+
+  p "“I’m in Group 6. What about you two?”"
+
+  v "“We’re in Group 17. We’ll have to split off there then.”"
+
+  p "“Yeah.”"
+
+  "I know they live in the same dorm as me, but I wonder which building…"
+
+  p "“Which building do you guys live in?”"
+
+  v "“Building? We live in Slothman.”"
+
+  "At her response, I suddenly recall Vi running out of the same building I lived in when I first saw her this morning."
+
+  p "“Oh wow, same here.”"
+
+  v "“Oh, really? Maybe we might see each other around the building!”"
+
+  p "“For sure.”"
+
+  v "“Totally! Us freshmen have to stick together, since this place is so big.”"
+
+  "That’s true. Looking at the size of this crowd makes me realize that."
+
+  v "“Well, we should get going.”"
+
+  "They’re so confident. I envy that."
+
+  # obligatory comment about walruses.
+
+  jump common_scene3

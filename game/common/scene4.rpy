@@ -72,7 +72,7 @@ label common_scene4:
 
     d "The seals commemorate the university’s previous graduating classes, so you’d really be stepping on the souls of successful people..."
 
-     d "Not that I haven’t stepped on a seal or two."
+    d "Not that I haven’t stepped on a seal or two."
 
     "Rosa laughs."
 
@@ -82,7 +82,7 @@ label common_scene4:
 
     "My parents never told me about this part of the school— did they ever step on a seal?"
 
-     p "Are the students really expected to follow that norm here?"
+    p "Are the students really expected to follow that norm here?"
 
     "Rosa laughs and puts her hands on her hips."
 
@@ -148,7 +148,7 @@ label common_scene4:
 
     "Rosa laughs."
 
-     d "You would do well in English. I can tell you that much."
+    d "You would do well in English. I can tell you that much."
 
     "Really?"
 
@@ -225,13 +225,13 @@ label common_scene4:
 
         "She looks more relaxed than ever, now that the tour is over."
 
-         d "We’ll be meeting back here. I’m going to walk you all to the Chancellor’s big speech."
+        d "We’ll be meeting back here. I’m going to walk you all to the Chancellor’s big speech."
 
         d "Enjoy your free hour! There’s plenty of time to get to know the campus."
 
         "After stretching and making sure I know the rest of today’s schedule, Rosa winks at me."
 
-         d "I’m such a mess."
+        d "I’m such a mess."
 
         d "I owe you one."
 

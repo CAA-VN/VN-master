@@ -1,6 +1,8 @@
 *.swp
 *.swo
 *.rpyc
+*.rpyb
+game/cache/persistent
 log.txt
 errors.txt
 traceback.txt

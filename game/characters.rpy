@@ -32,3 +32,7 @@ define p_m = player_mom
 define nvl_n = nvl_narrator
 define c = cora
 define v = violet
+
+#Character images
+
+image dwinelle_default = "dwinelle/default.png"
